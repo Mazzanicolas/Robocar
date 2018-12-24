@@ -2,7 +2,6 @@ import requests
 import cv2
 import urllib.request
 import numpy as np
-# import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -383,12 +382,7 @@ class Controller:
         # image1 and image2 must be the same shape.
         return cv2.addWeighted(image, 1.0, line_image, 0.95, 0.0)
 
-    def get_video_frame(self):
-        """
-        Get camera video frame
-        """
-        pass
  
-if __name__ == '__main__':
-    robocar = Controller()
-    robocar.get_video()
+# if __name__ == '__main__':
+#     robocar = Controller()
+#     robocar.get_video()
