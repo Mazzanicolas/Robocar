@@ -1,5 +1,7 @@
-# Robocar OpenCV Driver
 
+
+# Robocar OpenCV Driver
+![Robocar](./resources/images/banner.jpg)
 ## Dependencies
 
 You can install dependencies via `pip install`
@@ -14,11 +16,11 @@ You can install dependencies via `pip install`
 
 1- Create a Controller instance
 
-    `robocarController = Controller()`
+    robocarController = Controller()
 
 2- Call the get_video function 
 
-    `robocarController.get_video()`
+    robocarController.get_video()
 
 ## Configurable parameters
 
