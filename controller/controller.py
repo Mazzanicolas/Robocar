@@ -31,7 +31,7 @@ class Controller:
         self.canny_config = {
             'threshold1': 50,
             'threshold2': 150
-        }#[50, 150]
+        }
         self.blur_config = {
             'kernel': 3
             }
@@ -40,7 +40,6 @@ class Controller:
             'minLineLength': 20,
             'maxLineGap':    300
         }
-        #[20, 20, 300]
 
     def drive(self, angle=0, throttle=0, driver_mode="user", recording=False):
         """
@@ -68,12 +67,13 @@ class Controller:
         stream = urllib.request.urlopen(self.url+'/video')
         bytes = b''
         ###################### WEBCAM SETUP ###########################
-        # cap = cv2.VideoCapture(0)                                   ###
+        # cap = cv2.VideoCapture(0)                                 ###
         cv2.namedWindow('Robocar Cam' , cv2.WINDOW_NORMAL)          ###
         cv2.resizeWindow('Robocar Cam', 500, 700)                   ###
         cv2.namedWindow('Robocar Original' , cv2.WINDOW_NORMAL)     ###
         cv2.resizeWindow('Robocar Original', 700, 500)              ###
         ###################### WEBCAM SETUP ###########################
+        # User interface
         cv2.createTrackbar('Red Lower  ', 'Robocar Cam', self.color_filters['rl'], 255, self.red_lower)
         cv2.createTrackbar('Green Lower', 'Robocar Cam', self.color_filters['gl'], 255, self.green_lower)
         cv2.createTrackbar('Blue Lower ', 'Robocar Cam', self.color_filters['bl'], 255, self.blue_lower)
@@ -101,7 +101,7 @@ class Controller:
                 bytes = bytes[b+2:]
                 frame = cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), cv2.IMREAD_COLOR)
                 ###################### WEBCAM SETUP ###########################
-                # ret, frame = cap.read()                                     ###
+                # ret, frame = cap.read()                                   ###
                 ###################### WEBCAM SETUP ###########################
                 rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                 ############### Color Mask ################

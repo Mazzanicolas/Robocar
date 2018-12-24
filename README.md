@@ -45,7 +45,16 @@ You can install dependencies via `pip install`
 
 * Blur configuration
     * `kernel`
+
 * Hough lines configuration
     * `threshold`
     * `minLineLength`
     * `maxLineGap`
+
+## Information & Resources
+
+[Canny edge](https://docs.opencv.org/3.1.0/da/d22/tutorial_py_canny.html)
+
+[Blur](https://docs.opencv.org/3.1.0/d4/d13/tutorial_py_filtering.html)
+
+[Hough lines](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html)
