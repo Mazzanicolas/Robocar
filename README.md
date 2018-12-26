@@ -18,6 +18,12 @@ You can install dependencies via `pip install`
 
     robocarController = Controller()
 
+1.1- Default IP is `192.168.0.110` & Default port is `8887`. You can change this by creating the instance in the following way:
+
+    robocarController = Controller(ip='192.168.0.110', port='8887')
+
+Notice that the values ​​are strings.
+
 2- Call the get_video function 
 
     robocarController.get_video()
