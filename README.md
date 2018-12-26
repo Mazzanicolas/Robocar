@@ -14,6 +14,8 @@ You can install dependencies via `pip install`
 
 ## Driving the car
 
+First you may want to read how donkey car controller works [here](https://docs.donkeycar.com/guide/get_driving/).
+
 1- Create a Controller instance
 
     robocarController = Controller()
